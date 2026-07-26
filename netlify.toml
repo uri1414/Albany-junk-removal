@@ -1,0 +1,5 @@
+# Netlify configuration for Albany Junk Removal
+# Static HTML site at the repo root — no build step.
+[build]
+  publish = "."
+  command = ""
