@@ -363,3 +363,8 @@ footer{background:var(--forest-deep);color:#B7C7BD;padding:clamp(3rem,5vw,4.2rem
 .m-acc-panel.open{display:flex}
 .m-acc-panel a{font-family:var(--font-body);font-size:1.12rem;font-weight:600;color:var(--green-700);padding:.55rem 0;border-bottom:1px solid var(--line)}
 .m-acc-panel a:last-child{border-bottom:0}
+
+/* Wide (two-column) services dropdown for the full menu */
+.dropdown.wide{min-width:440px;display:grid;grid-template-columns:1fr 1fr;gap:.1rem .4rem}
+.dropdown.wide .drop-all{grid-column:1 / -1}
+@media(max-width:820px){ .dropdown.wide{min-width:300px;grid-template-columns:1fr} }

@@ -51,25 +51,25 @@
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://albanyjunkremoval.org/" },
-          { "@type": "ListItem", "position": 2, "name": "Services" }
+          { "@type": "ListItem", "position": 2, "name": "Services", "url": "https://albanyjunkremoval.org/mattress-removal/" }
         ]
       },
       {
         "@type": "ItemList",
         "name": "Junk Removal & Cleanout Services in Albany, Oregon",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Furniture Removal" },
-          { "@type": "ListItem", "position": 2, "name": "Mattress Removal" },
-          { "@type": "ListItem", "position": 3, "name": "Appliance Removal" },
+          { "@type": "ListItem", "position": 1, "name": "Furniture Removal", "url": "https://albanyjunkremoval.org/furniture-removal/" },
+          { "@type": "ListItem", "position": 2, "name": "Mattress Removal", "url": "https://albanyjunkremoval.org/mattress-removal/" },
+          { "@type": "ListItem", "position": 3, "name": "Appliance Removal", "url": "https://albanyjunkremoval.org/appliance-removal/" },
           { "@type": "ListItem", "position": 4, "name": "Hot Tub Removal", "url": "https://albanyjunkremoval.org/hot-tub-removal/" },
-          { "@type": "ListItem", "position": 5, "name": "Garage Cleanouts" },
-          { "@type": "ListItem", "position": 6, "name": "Storage Unit Cleanouts" },
+          { "@type": "ListItem", "position": 5, "name": "Garage Cleanouts", "url": "https://albanyjunkremoval.org/garage-cleanout/" },
+          { "@type": "ListItem", "position": 6, "name": "Storage Unit Cleanouts", "url": "https://albanyjunkremoval.org/storage-unit-cleanout/" },
           { "@type": "ListItem", "position": 7, "name": "Estate Cleanouts", "url": "https://albanyjunkremoval.org/estate-cleanout/" },
-          { "@type": "ListItem", "position": 8, "name": "Office Cleanouts" },
-          { "@type": "ListItem", "position": 9, "name": "Construction Debris Removal" },
-          { "@type": "ListItem", "position": 10, "name": "Yard Waste Removal" },
-          { "@type": "ListItem", "position": 11, "name": "Scrap Metal Removal" },
-          { "@type": "ListItem", "position": 12, "name": "General Household Junk" }
+          { "@type": "ListItem", "position": 8, "name": "Office Cleanouts", "url": "https://albanyjunkremoval.org/office-cleanout/" },
+          { "@type": "ListItem", "position": 9, "name": "Construction Debris Removal", "url": "https://albanyjunkremoval.org/construction-debris-removal/" },
+          { "@type": "ListItem", "position": 10, "name": "Yard Waste Removal", "url": "https://albanyjunkremoval.org/yard-waste-removal/" },
+          { "@type": "ListItem", "position": 11, "name": "Scrap Metal Removal", "url": "https://albanyjunkremoval.org/scrap-metal-removal/" },
+          { "@type": "ListItem", "position": 12, "name": "General Household Junk", "url": "https://albanyjunkremoval.org/general-household-junk/" }
         ]
       }
     ]
@@ -88,9 +88,19 @@
         <div class="nav-links">
           <div class="has-drop">
             <a class="drop-parent" href="/services/">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></a>
-            <div class="dropdown">
+            <div class="dropdown wide">
+              <a href="/furniture-removal/">Furniture Removal</a>
+              <a href="/mattress-removal/">Mattress Removal</a>
+              <a href="/appliance-removal/">Appliance Removal</a>
               <a href="/hot-tub-removal/">Hot Tub Removal</a>
-              <a href="/estate-cleanout/">Estate Cleanout</a>
+              <a href="/garage-cleanout/">Garage Cleanouts</a>
+              <a href="/storage-unit-cleanout/">Storage Unit Cleanouts</a>
+              <a href="/estate-cleanout/">Estate Cleanouts</a>
+              <a href="/office-cleanout/">Office Cleanouts</a>
+              <a href="/construction-debris-removal/">Construction Debris</a>
+              <a href="/yard-waste-removal/">Yard Waste Removal</a>
+              <a href="/scrap-metal-removal/">Scrap Metal Removal</a>
+              <a href="/general-household-junk/">General Household Junk</a>
               <a class="drop-all" href="/services/">All services</a>
             </div>
           </div>
@@ -115,8 +125,18 @@
     <div class="m-acc">
       <button class="m-acc-btn" id="mAccBtn" aria-expanded="false" aria-controls="mAccPanel">Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></button>
       <div class="m-acc-panel" id="mAccPanel">
+        <a href="/furniture-removal/">Furniture Removal</a>
+        <a href="/mattress-removal/">Mattress Removal</a>
+        <a href="/appliance-removal/">Appliance Removal</a>
         <a href="/hot-tub-removal/">Hot Tub Removal</a>
-        <a href="/estate-cleanout/">Estate Cleanout</a>
+        <a href="/garage-cleanout/">Garage Cleanouts</a>
+        <a href="/storage-unit-cleanout/">Storage Unit Cleanouts</a>
+        <a href="/estate-cleanout/">Estate Cleanouts</a>
+        <a href="/office-cleanout/">Office Cleanouts</a>
+        <a href="/construction-debris-removal/">Construction Debris</a>
+        <a href="/yard-waste-removal/">Yard Waste Removal</a>
+        <a href="/scrap-metal-removal/">Scrap Metal Removal</a>
+        <a href="/general-household-junk/">General Household Junk</a>
         <a href="/services/">All services</a>
       </div>
     </div>
@@ -167,56 +187,66 @@
     <section>
       <div class="wrap">
         <div class="svc-grid">
-          <article class="svc-item reveal">
+          <a class="svc-item reveal" href="/furniture-removal/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3"/><path d="M2 13a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5h-2v-2H4v2H2z"/></svg></div>
             <h3>Furniture Removal</h3><p>Couches, sofas, tables, chairs, dressers &amp; more.</p>
-          </article>
-          <article class="svc-item reveal">
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
+          <a class="svc-item reveal" href="/mattress-removal/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M4 12h16"/></svg></div>
             <h3>Mattress Removal</h3><p>Old mattresses &amp; box springs, any size.</p>
-          </article>
-          <article class="svc-item reveal">
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
+          <a class="svc-item reveal" href="/appliance-removal/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h.01M9 11h.01"/></svg></div>
             <h3>Appliance Removal</h3><p>Fridges, washers, dryers, stoves &amp; more.</p>
-          </article>
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
           <a class="svc-item reveal" href="/hot-tub-removal/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 16 0v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M4 12h16"/><path d="M8 8v-.5M16 8v-.5"/></svg></div>
             <h3>Hot Tub Removal</h3><p>We disassemble &amp; haul away old spas.</p>
             <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
           </a>
-          <article class="svc-item reveal">
+          <a class="svc-item reveal" href="/garage-cleanout/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6"/><path d="M5 9v11h14V9"/><path d="M9 20v-6h6v6"/></svg></div>
             <h3>Garage Cleanouts</h3><p>Clear it all and reclaim the whole space.</p>
-          </article>
-          <article class="svc-item reveal">
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
+          <a class="svc-item reveal" href="/storage-unit-cleanout/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div>
             <h3>Storage Unit Cleanouts</h3><p>Empty a unit fast, top to bottom.</p>
-          </article>
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
           <a class="svc-item reveal" href="/estate-cleanout/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-8h6v8"/></svg></div>
             <h3>Estate Cleanouts</h3><p>Compassionate, full-property clearing.</p>
             <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
           </a>
-          <article class="svc-item reveal">
+          <a class="svc-item reveal" href="/office-cleanout/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v3"/></svg></div>
             <h3>Office Cleanouts</h3><p>Desks, cubicles &amp; commercial junk.</p>
-          </article>
-          <article class="svc-item reveal">
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
+          <a class="svc-item reveal" href="/construction-debris-removal/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"/><path d="M4 20l3-9 5 3 3-6 5 12"/></svg></div>
             <h3>Construction Debris</h3><p>Remodel &amp; demo debris hauled away.</p>
-          </article>
-          <article class="svc-item reveal">
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
+          <a class="svc-item reveal" href="/yard-waste-removal/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6M5 8l3 3M19 8l-3 3"/><path d="M4 21c1-5 4-8 8-8s7 3 8 8z"/></svg></div>
             <h3>Yard Waste Removal</h3><p>Branches, brush, soil &amp; green debris.</p>
-          </article>
-          <article class="svc-item reveal">
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
+          <a class="svc-item reveal" href="/scrap-metal-removal/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l7 7-4 4-7-7z"/><path d="M10 7 3 14v7h7l7-7"/></svg></div>
             <h3>Scrap Metal Removal</h3><p>Metal picked up &amp; recycled responsibly.</p>
-          </article>
-          <article class="svc-item reveal">
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
+          <a class="svc-item reveal" href="/general-household-junk/">
             <div class="si"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></div>
             <h3>General Household Junk</h3><p>If you want it gone, we'll take it.</p>
-          </article>
+          <span class="si-more">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+        </a>
         </div>
         <p style="margin-top:1.8rem;color:var(--muted);font-size:.98rem">Don't see your item? <a href="#quote" style="font-weight:600">Just ask</a> — we remove almost anything. Detailed pages for each service are on the way; in the meantime, call <a href="tel:+15038774254" style="font-weight:600">(503) 877-4254</a> or request a free quote below.</p>
       </div>
