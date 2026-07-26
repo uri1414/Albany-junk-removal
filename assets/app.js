@@ -21,15 +21,16 @@
     menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { toggle(false); }); });
   }
 
-  // Mobile "Services" accordion (hover dropdowns don't work on touch)
-  var accBtn = document.getElementById('mAccBtn');
-  var accPanel = document.getElementById('mAccPanel');
-  if (accBtn && accPanel) {
-    accBtn.addEventListener('click', function () {
-      var open = accPanel.classList.toggle('open');
-      accBtn.setAttribute('aria-expanded', open);
+  // Mobile accordions (Services, Service Area, …) — hover dropdowns don't work on touch.
+  // Each .m-acc-btn toggles the .m-acc-panel immediately after it.
+  document.querySelectorAll('.m-acc-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.nextElementSibling;
+      if (!panel) return;
+      var open = panel.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
     });
-  }
+  });
 
   // Reveal on scroll
   if ('IntersectionObserver' in window) {
