@@ -1,18 +1,30 @@
-/* Albany Junk Removal — shared stylesheet (used by every page) */
+/* Albany Junk Removal — shared stylesheet (used by every page)
+   Brand: retro sticker / beaver-mascot system.
+   Orange + Ink on Cream · Anton display · Barlow UI · Kaushan Script accent.
+   Legacy variable names (--forest / --green / --amber) are kept so every existing
+   rule reskins from these values; they now map to the new palette by role:
+     --forest  -> Ink (dark surfaces & headings)
+     --green   -> Orange (primary brand / CTA)
+     --amber   -> Orange (accent, same family)
+     --cream   -> brand Cream background
+*/
 :root{
-  --forest:#0F3D2E; --forest-deep:#0A2C21;
-  --green:#1B8A50; --green-700:#146B3E; --green-soft:#E4F0E8;
-  --amber:#F6A623; --amber-deep:#DC8A0C;
-  --cream:#F7F5EF; --paper:#FFFFFF;
-  --ink:#12261E; --body:#3B4A43; --muted:#6A7770; --line:#E6E5DC;
-  --radius:16px; --radius-sm:11px; --radius-lg:24px;
+  --forest:#0E0C0B; --forest-deep:#0E0C0B;
+  --green:#D73F09; --green-700:#B4330A; --green-soft:#F3E7D2;
+  --amber:#D73F09; --amber-deep:#B4330A;
+  --cream:#F4ECD8; --paper:#FBF4E2;
+  --ink:#0E0C0B; --body:#2A2523; --muted:#7A6E63; --line:#0E0C0B;
+  --wood-tan:#C9A26B; --fur:#6B4326; --cream-deep:#E7DBBE;
+  --radius:14px; --radius-sm:11px; --radius-lg:20px;
   --maxw:1180px;
   --ease:cubic-bezier(.22,.61,.36,1);
-  --shadow-sm:0 1px 2px rgba(15,61,46,.06), 0 2px 6px -2px rgba(15,61,46,.09);
-  --shadow-md:0 12px 28px -14px rgba(15,61,46,.28), 0 4px 10px -6px rgba(15,61,46,.14);
-  --shadow-lg:0 40px 80px -32px rgba(15,61,46,.42), 0 12px 28px -16px rgba(15,61,46,.22);
-  --font-body:"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
-  --font-display:"Sora",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --shadow-sm:2px 2px 0 var(--ink);
+  --shadow-md:4px 4px 0 var(--ink);
+  --shadow-lg:6px 6px 0 var(--ink);
+  --font-body:"Barlow",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Anton",Impact,"Arial Narrow",ui-sans-serif,sans-serif;
+  --font-cond:"Barlow Condensed",ui-sans-serif,system-ui,sans-serif;
+  --font-script:"Kaushan Script","Segoe Script",cursive;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -96,7 +108,7 @@ header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -20px rgba
 /* Trust bar */
 .trust{background:var(--forest)}
 .trust .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem;padding-block:1.15rem}
-.trust-item{display:flex;align-items:center;gap:.7rem;font-weight:500;font-size:.98rem;color:#E7F0EA}
+.trust-item{display:flex;align-items:center;gap:.7rem;font-weight:500;font-size:.98rem;color:#F3E7D2}
 .trust-item svg{width:20px;height:20px;color:var(--amber);flex-shrink:0}
 .trust-item strong{color:#fff;font-weight:700}
 
@@ -125,7 +137,7 @@ section{padding:clamp(3.4rem,7vw,6rem) 0}
 /* Service grid (what we take) */
 .svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;margin-top:2.6rem}
 .svc-item{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem 1.3rem;box-shadow:var(--shadow-sm);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease);color:inherit;display:block}
-.svc-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#D6E2D9}
+.svc-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:#E7DBBE}
 a.svc-item .si-more{margin-top:.7rem;display:inline-flex;align-items:center;gap:.35rem;color:var(--green-700);font-weight:700;font-size:.85rem}
 a.svc-item .si-more svg{width:14px;height:14px;transition:transform .25s var(--ease)}
 a.svc-item:hover .si-more svg{transform:translateX(3px)}
@@ -144,12 +156,12 @@ a.svc-item:hover .si-more svg{transform:translateX(3px)}
 .why-item p{font-size:.95rem;color:var(--body)}
 .why-aside{background:var(--forest);color:#fff;border-radius:var(--radius-lg);padding:clamp(1.8rem,3vw,2.5rem);position:sticky;top:100px}
 .why-aside h3{color:#fff;font-size:1.55rem}
-.why-aside p{color:#CFE0D5;margin-top:.9rem;font-size:1rem}
+.why-aside p{color:#E7DBBE;margin-top:.9rem;font-size:1rem}
 .why-aside .stat{margin-top:1.8rem;display:grid;gap:1.2rem}
 .why-aside .stat .row{border-top:1px solid rgba(255,255,255,.15);padding-top:1.2rem}
 .why-aside .stat .row:first-child{border-top:0;padding-top:0}
 .why-aside .stat b{font-family:var(--font-display);font-size:1.5rem;color:#fff;letter-spacing:-.02em;display:block}
-.why-aside .stat span{color:#A9C3B4;font-size:.92rem}
+.why-aside .stat span{color:#B6A489;font-size:.92rem}
 
 /* Process */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:2.8rem;counter-reset:s}
@@ -165,14 +177,14 @@ a.svc-item:hover .si-more svg{transform:translateX(3px)}
 .mission .wrap{max-width:900px;text-align:center}
 .mission h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.6rem)}
 .mission .mlist{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin-top:2rem}
-.mission .mlist li{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#EAF3EE;font-weight:600;padding:.7rem 1.15rem;border-radius:100px;font-size:.98rem}
+.mission .mlist li{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);color:#F3E7D2;font-weight:600;padding:.7rem 1.15rem;border-radius:100px;font-size:.98rem}
 .mission .mlist svg{width:18px;height:18px;color:var(--amber)}
 
 /* Areas */
 .areas{background:var(--green-soft)}
 .areas-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4rem);align-items:center}
 .area-pills{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
-.area-pills span,.area-pills a{background:var(--paper);border:1px solid #D3E1D8;color:var(--forest);font-weight:600;font-size:.95rem;padding:.55rem 1rem;border-radius:100px}
+.area-pills span,.area-pills a{background:var(--paper);border:1px solid #E7DBBE;color:var(--forest);font-weight:600;font-size:.95rem;padding:.55rem 1rem;border-radius:100px}
 .area-pills a:hover{border-color:var(--green);color:var(--green-700)}
 .area-pills span.home{background:var(--forest);color:#fff;border-color:var(--forest)}
 
@@ -192,9 +204,9 @@ details.faq .fa{padding:0 1.4rem 1.3rem;color:var(--body);font-size:1rem}
 .quote{background:linear-gradient(160deg,var(--forest) 0%,var(--forest-deep) 100%);color:#fff}
 .quote-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4rem);align-items:center}
 .quote h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem)}
-.quote .lead{color:#CFE0D5;margin-top:1.1rem;font-size:1.1rem;max-width:40ch}
+.quote .lead{color:#E7DBBE;margin-top:1.1rem;font-size:1.1rem;max-width:40ch}
 .quote-contact{margin-top:2rem;display:grid;gap:1rem}
-.quote-contact a,.quote-contact div{display:flex;align-items:center;gap:.85rem;color:#E9F2EC;font-weight:500}
+.quote-contact a,.quote-contact div{display:flex;align-items:center;gap:.85rem;color:#F3E7D2;font-weight:500}
 .quote-contact .qic{width:42px;height:42px;border-radius:11px;background:rgba(255,255,255,.09);display:grid;place-items:center;flex-shrink:0}
 .quote-contact .qic svg{width:19px;height:19px;color:var(--amber)}
 .quote-contact b{color:#fff;font-family:var(--font-display);font-size:1.05rem;letter-spacing:-.01em}
@@ -204,7 +216,7 @@ details.faq .fa{padding:0 1.4rem 1.3rem;color:var(--body);font-size:1rem}
 .field{margin-bottom:1rem}
 .field label{display:block;font-size:.86rem;font-weight:600;color:var(--forest);margin-bottom:.4rem}
 .field input,.field select,.field textarea{width:100%;font-family:var(--font-body);font-size:1rem;color:var(--ink);background:var(--cream);border:1.5px solid var(--line);border-radius:var(--radius-sm);padding:.8rem .9rem;transition:border-color .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease)}
-.field input::placeholder,.field textarea::placeholder{color:#9AA49E}
+.field input::placeholder,.field textarea::placeholder{color:#9A8A75}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green);background:#fff;box-shadow:0 0 0 4px rgba(27,138,80,.14)}
 .field textarea{resize:vertical;min-height:92px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
@@ -218,18 +230,18 @@ details.faq .fa{padding:0 1.4rem 1.3rem;color:var(--body);font-size:1rem}
 .form-success p{color:var(--body);margin-top:.6rem}
 
 /* Footer */
-footer{background:var(--forest-deep);color:#B7C7BD;padding:clamp(3rem,5vw,4.2rem) 0 2rem}
+footer{background:var(--forest-deep);color:#C9B79A;padding:clamp(3rem,5vw,4.2rem) 0 2rem}
 .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:2.4rem}
 .fbrand{display:flex;align-items:center;gap:.7rem}
 .fbrand .mark{width:44px;height:44px}
 .fwordmark{font-family:var(--font-display);font-weight:800;color:#fff;font-size:1.2rem;letter-spacing:-.02em;line-height:1}
 .fwordmark span{display:block;font-size:.58rem;letter-spacing:.22em;color:var(--amber);font-weight:700;margin-top:.3rem}
-.foot-grid p.fabout{font-size:.94rem;margin-top:1.1rem;color:#9DB2A4;max-width:34ch}
+.foot-grid p.fabout{font-size:.94rem;margin-top:1.1rem;color:#B6A489;max-width:34ch}
 .foot-col h5{color:#fff;font-family:var(--font-display);font-size:.98rem;letter-spacing:.02em;margin:0 0 1rem}
-.foot-col a,.foot-col li{color:#9DB2A4;font-size:.94rem;padding:.28rem 0;display:block}
+.foot-col a,.foot-col li{color:#B6A489;font-size:.94rem;padding:.28rem 0;display:block}
 .foot-col a:hover{color:#fff}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:2.8rem;padding-top:1.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.85rem;color:#7E9488}
-.ph{color:#7E9488;font-style:italic}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:2.8rem;padding-top:1.6rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.85rem;color:#9A8A75}
+.ph{color:#9A8A75;font-style:italic}
 
 /* Reveal animation */
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
@@ -241,7 +253,7 @@ footer{background:var(--forest-deep);color:#B7C7BD;padding:clamp(3rem,5vw,4.2rem
 .breadcrumb{padding:1.2rem 0 0}
 .breadcrumb ol{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;font-size:.85rem;color:var(--muted)}
 .breadcrumb li{display:inline-flex;align-items:center;gap:.45rem}
-.breadcrumb li+li::before{content:"/";color:#C7CFC8}
+.breadcrumb li+li::before{content:"/";color:#C9A26B}
 .breadcrumb a{color:var(--green-700);font-weight:600}
 .breadcrumb [aria-current]{color:var(--forest);font-weight:600}
 
@@ -252,7 +264,7 @@ footer{background:var(--forest-deep);color:#B7C7BD;padding:clamp(3rem,5vw,4.2rem
 .page-hero .lead{font-size:1.16rem;color:var(--body);margin-top:1.15rem;max-width:46ch}
 
 /* Photo slot placeholder (owner drops real job photos in later) */
-.photo-slot{position:relative;border:2px dashed #C2D0C6;background:var(--green-soft);border-radius:var(--radius-lg);display:grid;place-items:center;text-align:center;color:var(--green-700);padding:2rem;min-height:300px;box-shadow:var(--shadow-sm)}
+.photo-slot{position:relative;border:2px dashed #C9A26B;background:var(--green-soft);border-radius:var(--radius-lg);display:grid;place-items:center;text-align:center;color:var(--green-700);padding:2rem;min-height:300px;box-shadow:var(--shadow-sm)}
 .photo-slot svg{width:34px;height:34px;margin-bottom:.7rem;color:var(--green)}
 .photo-slot b{font-family:var(--font-display);font-size:1rem;color:var(--forest)}
 .photo-slot small{display:block;color:var(--muted);font-weight:500;margin-top:.3rem;font-size:.82rem;max-width:26ch}
@@ -284,19 +296,19 @@ footer{background:var(--forest-deep);color:#B7C7BD;padding:clamp(3rem,5vw,4.2rem
 /* Sticky side CTA card */
 .sidecard{background:var(--forest);color:#fff;border-radius:var(--radius-lg);padding:clamp(1.6rem,3vw,2.1rem);position:sticky;top:100px}
 .sidecard h3{color:#fff;font-size:1.4rem}
-.sidecard p{color:#CFE0D5;margin-top:.7rem;font-size:.97rem}
+.sidecard p{color:#E7DBBE;margin-top:.7rem;font-size:.97rem}
 .sidecard .callbig{display:flex;align-items:center;gap:.7rem;margin-top:1.3rem;color:#fff;font-family:var(--font-display);font-weight:800;font-size:1.4rem}
 .sidecard .callbig svg{width:22px;height:22px;color:var(--amber)}
 .sidecard .btn{width:100%;margin-top:1.1rem}
 .sidecard .facts{margin-top:1.5rem;display:grid;gap:.9rem}
-.sidecard .facts .row{display:flex;gap:.7rem;align-items:flex-start;border-top:1px solid rgba(255,255,255,.14);padding-top:.9rem;color:#DDE8E0;font-size:.92rem}
+.sidecard .facts .row{display:flex;gap:.7rem;align-items:flex-start;border-top:1px solid rgba(255,255,255,.14);padding-top:.9rem;color:#EADFC6;font-size:.92rem}
 .sidecard .facts .row:first-child{border-top:0;padding-top:0}
 .sidecard .facts svg{width:18px;height:18px;color:var(--amber);flex-shrink:0;margin-top:2px}
 
 /* Related services */
 .related{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.6rem}
 .related a{display:flex;align-items:center;gap:.7rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.15rem;box-shadow:var(--shadow-sm);color:var(--forest);font-weight:600;font-size:.97rem;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease)}
-.related a:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#D6E2D9}
+.related a:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:#E7DBBE}
 .related a svg{width:20px;height:20px;color:var(--green-700);flex-shrink:0}
 
 @media(max-width:960px){
@@ -368,3 +380,130 @@ footer{background:var(--forest-deep);color:#B7C7BD;padding:clamp(3rem,5vw,4.2rem
 .dropdown.wide{min-width:440px;display:grid;grid-template-columns:1fr 1fr;gap:.1rem .4rem}
 .dropdown.wide .drop-all{grid-column:1 / -1}
 @media(max-width:820px){ .dropdown.wide{min-width:300px;grid-template-columns:1fr} }
+
+/* ============================================================
+   BRAND OVERHAUL — retro sticker / beaver-mascot system (2026)
+   Layered last so it wins the cascade over the base rules above.
+   ============================================================ */
+
+/* Anton is a single 400 weight — drop the old 800 / negative tracking */
+h1,h2,h3,h4,.wordmark,.fwordmark,.mobile-menu a,.m-acc-btn,
+.why-aside .stat b{font-weight:400;letter-spacing:0}
+h1,h2{text-transform:uppercase;letter-spacing:.5px;line-height:1.03}
+.hero h1,.page-hero h1{letter-spacing:.5px}
+
+/* Numerals & sentence UI read better in Barlow Condensed than Anton */
+.callnum,.sidecard .callbig,.why-aside .stat b{font-family:var(--font-cond)}
+details.faq summary{font-family:var(--font-cond);font-weight:600;text-transform:none;letter-spacing:.01em;font-size:1.12rem}
+
+/* Eyebrow -> Barlow Condensed label */
+.eyebrow{font-family:var(--font-cond);font-weight:600;font-size:.95rem;letter-spacing:.12em;color:var(--green)}
+.eyebrow::before{background:var(--green);height:3px}
+
+/* Kaushan script accent (secondary tagline) */
+.script-accent{font-family:var(--font-script);font-weight:400;color:var(--green);
+  font-size:clamp(1.55rem,3.4vw,2.3rem);line-height:1.05;display:inline-block;transform:rotate(-3deg)}
+.hero .script-accent,.page-hero .script-accent{margin:1rem 0 .2rem}
+.fwordmark .script-accent{font-size:1.35rem;color:var(--green);margin-top:.5rem}
+
+/* Buttons: chunky sticker — ink outline + hard offset shadow that "presses" */
+.btn{border:2.5px solid var(--ink);border-radius:12px;font-family:var(--font-cond);
+  font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:1.1rem;
+  box-shadow:3px 3px 0 var(--ink);
+  transition:transform .12s var(--ease),box-shadow .12s var(--ease),background .2s var(--ease),color .2s var(--ease)}
+.btn:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.btn-amber,.btn-primary{background:var(--green);color:#fff}
+.btn-amber:hover,.btn-primary:hover{background:var(--green-700);color:#fff}
+.btn-ghost{background:var(--cream);color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-lg{font-size:1.18rem;padding:1rem 1.7rem}
+
+/* Header: solid cream with a hard ink underline */
+header{background:var(--cream);backdrop-filter:none;border-bottom:2.5px solid var(--ink)}
+header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
+.brand .mark{width:48px;height:48px}
+.wordmark{color:var(--ink);font-size:1.34rem;letter-spacing:.3px}
+.wordmark span{font-family:var(--font-cond);color:var(--green);font-weight:600;letter-spacing:.15em;font-size:.62rem}
+.nav-links a{color:var(--ink);font-family:var(--font-cond);font-weight:600;font-size:1.06rem;text-transform:uppercase;letter-spacing:.03em}
+.nav-links a::after{background:var(--green);height:3px}
+.callnum{color:var(--ink)}
+.callnum svg{color:var(--green)}
+.burger span{background:var(--ink)}
+
+/* Chips & pills: ink-outlined stickers */
+.chip{background:var(--paper);border:2px solid var(--ink);color:var(--ink);font-weight:600;box-shadow:2px 2px 0 var(--ink)}
+.chip svg{color:var(--green)}
+
+/* Cards: bold ink outlines (+ orange icon tiles) */
+.svc-item,.take-card,.feature,.related a,details.faq,.float-card{border-width:2px;border-color:var(--ink)}
+.svc-item{border-radius:14px}
+.svc-item:hover{border-color:var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.svc-item .si,.why-item .wic,.float-card .ic{background:var(--green);border:2px solid var(--ink);border-radius:10px}
+.svc-item .si svg,.why-item .wic svg,.float-card .ic svg{color:#fff}
+.related a:hover{border-color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+
+/* Inputs: 3px ink outline, sticker-shadow on focus (per brand sheet) */
+.field input,.field select,.field textarea{border:3px solid var(--ink);border-radius:10px;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);background:#fff;box-shadow:4px 4px 0 var(--green)}
+.field label{color:var(--ink);font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.05em;font-size:.92rem;font-weight:600}
+
+/* Quote form card = big sticker with orange top bar */
+.form{border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);position:relative;overflow:hidden}
+.form::before{content:"";position:absolute;left:0;right:0;top:0;height:8px;background:var(--green)}
+.form h3{color:var(--ink)}
+.form-success .ok{background:var(--green);border:2px solid var(--ink)}
+.form-success .ok svg{color:#fff}
+
+/* Dark (ink) surfaces: warm cream text instead of the old green-tint greys */
+.trust-item,.mission .mlist li,.why-aside p,.quote .lead,.sidecard p,
+.foot-col a,.foot-col li,.foot-grid p.fabout{color:var(--cream-deep)}
+.trust-item svg,.mission .mlist svg,.sidecard .callbig svg,.sidecard .facts svg,
+.quote-contact .qic svg,.why-aside .stat span{color:var(--green)}
+.why-aside,.sidecard{border:2.5px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+
+/* Step numbers + list bullets in orange */
+.step::before{color:var(--green)}
+.prose ul.bullets li::before{background:var(--green)}
+
+/* Service-area pills */
+.area-pills span,.area-pills a{border:2px solid var(--ink);color:var(--ink);box-shadow:2px 2px 0 var(--ink)}
+.area-pills a:hover{color:var(--green-700)}
+.area-pills span.home{background:var(--green);color:#fff;border-color:var(--ink)}
+
+/* Hero art: cream sticker panel holding the truck illustration */
+.hero-art{background:var(--cream-deep);border:3px solid var(--ink);box-shadow:6px 6px 0 var(--ink);
+  aspect-ratio:auto;display:grid;place-items:center;padding:22px;gap:14px}
+.hero-art::before{display:none}
+.hero-art img.scene,.hero-art svg.scene{width:100%;height:auto;border-radius:8px}
+.float-card{box-shadow:3px 3px 0 var(--ink)}
+
+/* Checkerboard motif strip — brand signature band under the header */
+.motif-strip{height:16px;width:100%;
+  background-color:var(--cream);
+  background-image:
+    linear-gradient(90deg,var(--ink) 50%,transparent 0),
+    linear-gradient(90deg,var(--green) 50%,transparent 0);
+  background-size:32px 100%,32px 100%;
+  background-position:0 0,16px 0;
+  background-repeat:repeat-x,repeat-x;
+  border-bottom:2.5px solid var(--ink)}
+
+/* ---- Header spacing: keep nav on one row, phone un-wrapped ---- */
+.nav{gap:1rem}
+.nav-links{gap:1.15rem}
+.nav-links a{font-size:1rem;letter-spacing:.02em}
+.nav-cta{gap:.7rem}
+.callnum{white-space:nowrap;font-size:.95rem}
+.wordmark{font-size:1.18rem}
+.wordmark span{font-size:.55rem;letter-spacing:.12em}
+@media(max-width:1080px){ .callnum{display:none} }
+
+/* ---- Hero art caption + trust badges under the truck ---- */
+.hero-art-cap{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.06em;
+  font-weight:600;color:var(--green);text-align:center;font-size:1.02rem;margin:0}
+.hero-badges{display:flex;gap:.8rem;margin-top:1rem}
+.hero-badges .float-card{position:static;max-width:none;flex:1;box-shadow:3px 3px 0 var(--ink)}
+@media(max-width:520px){ .hero-badges{flex-direction:column} }
+.nav-links a,.nav-links .drop-parent{white-space:nowrap}
+@media(max-width:1180px){ .nav-links{gap:1rem} .nav-links a{font-size:.95rem} }
