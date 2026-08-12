@@ -511,13 +511,15 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 /* ============================================================
    Homepage hero: truck illustration as the full-width section background
    ============================================================ */
-.hero{position:relative;overflow:hidden;background-color:#F3E7D6}
-.hero .wrap{position:relative}
+.hero{position:relative;overflow:hidden;background-color:#F3E7D6;min-height:min(86vh,860px);display:flex;align-items:flex-start}
+.hero .wrap{position:relative;width:100%}
 .hero-grid{grid-template-columns:1fr;position:relative;z-index:2}
-.hero-copy{max-width:620px;padding-bottom:clamp(150px,26vw,400px)}
+.hero-copy{max-width:600px;padding-bottom:clamp(180px,34vw,540px)}
 .hero-copy .hero-art-cap{text-align:left;margin-top:1.1rem;margin-bottom:.4rem}
-.hero-truck{position:absolute;left:0;right:0;bottom:0;z-index:1;pointer-events:none;
-  height:clamp(190px,30vw,480px);
+/* big, edge-bleeding truck that dominates the lower hero (reference-style) */
+.hero-truck{position:absolute;left:50%;transform:translateX(-50%);bottom:0;z-index:1;pointer-events:none;
+  width:min(1560px,120vw);aspect-ratio:1495/410;
   background:url(/assets/truck.png) no-repeat center bottom;background-size:contain}
 /* keep the headline crisp where it may sit over the art */
 .hero-copy>*{position:relative}
+@media(max-width:700px){ .hero{min-height:auto} .hero-truck{width:132vw} .hero-copy{padding-bottom:44vw} }
