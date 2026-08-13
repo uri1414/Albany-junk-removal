@@ -81,6 +81,15 @@
     });
   }
 
+  // Before / after comparison slider
+  var ba = document.getElementById('ba');
+  var baRange = document.getElementById('baRange');
+  if (ba && baRange) {
+    var setPos = function () { ba.style.setProperty('--pos', baRange.value + '%'); };
+    baRange.addEventListener('input', setPos);
+    setPos();
+  }
+
   // Current year in footer
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
