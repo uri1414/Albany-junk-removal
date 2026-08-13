@@ -695,3 +695,10 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
   .final-lead .final-sub{margin-inline:auto} .final-form{text-align:left} }
 .ba-img .ph-note{display:none}
 .area2-map{background:var(--cream-deep)}
+
+/* Real photos: before/after slider + cleanout cards */
+.ba{aspect-ratio:3/2}
+.ba-img{width:100%;height:100%;object-fit:cover;display:block}
+.ba-tag{z-index:2}
+.clean-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:560px){ .ba{aspect-ratio:4/3} }
