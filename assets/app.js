@@ -81,6 +81,11 @@
     });
   }
 
+  // Cleanout cards: tap to reveal the "after" on touch (hover handles desktop)
+  document.querySelectorAll('.clean-photo.ba-hover').forEach(function (el) {
+    el.addEventListener('click', function () { el.classList.toggle('revealed'); });
+  });
+
   // Before / after comparison slider
   var ba = document.getElementById('ba');
   var baRange = document.getElementById('baRange');
