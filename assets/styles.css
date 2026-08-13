@@ -511,15 +511,25 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 /* ============================================================
    Homepage hero: truck illustration as the full-width section background
    ============================================================ */
-.hero{position:relative;overflow:hidden;min-height:min(92vh,900px);display:flex;align-items:center;
+.hero{position:relative;overflow:hidden;min-height:min(94vh,920px);display:flex;align-items:flex-end;
+  padding-bottom:clamp(1.6rem,4vw,3rem);
   background:#241609 url(/assets/hero-bg.jpg) no-repeat center/cover}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:linear-gradient(90deg,rgba(14,11,9,.95) 0%,rgba(14,11,9,.88) 26%,rgba(14,11,9,.62) 46%,rgba(14,11,9,.28) 66%,rgba(14,11,9,.06) 82%,transparent 92%)}
+  background:
+    linear-gradient(90deg,rgba(14,11,9,.92) 0%,rgba(14,11,9,.72) 30%,rgba(14,11,9,.32) 50%,rgba(14,11,9,.06) 68%,transparent 80%),
+    linear-gradient(0deg,rgba(14,11,9,.88) 0%,rgba(14,11,9,.5) 26%,rgba(14,11,9,.12) 48%,transparent 62%)}
 .hero .wrap{position:relative;width:100%;z-index:2}
 .hero-grid{grid-template-columns:1fr}
 .hero-truck{display:none}          /* truck is baked into the background scene now */
-.hero-copy{max-width:600px;padding-bottom:0}
+.hero-copy{max-width:540px;padding-bottom:0}
 .hero-copy>*{position:relative}
+.hero h1{font-size:clamp(2.1rem,4.2vw,3.35rem)}
+.hero h1 em{white-space:nowrap}
+.hero .eyebrow{font-size:.82rem;letter-spacing:.09em}
+.hero .script-accent{font-size:clamp(1.35rem,3vw,1.95rem)}
+.hero .lead{max-width:36ch;font-size:1.12rem;margin-top:1.1rem}
+.hero .chips{margin-top:1.4rem}
+.hero .hero-actions{margin-top:1.5rem}
 /* light type over the dark golden-hour scene */
 .hero .eyebrow{color:#F6A96B}
 .hero .eyebrow::before{background:#F6A96B}
