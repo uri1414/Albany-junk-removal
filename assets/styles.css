@@ -721,3 +721,40 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 .clean-card:hover .ba-flip,.clean-photo.revealed .ba-flip{background:var(--green)}
 .clean-card:hover .ba-flip .t-b,.clean-photo.revealed .ba-flip .t-b{display:none}
 .clean-card:hover .ba-flip .t-a,.clean-photo.revealed .ba-flip .t-a{display:inline}
+
+/* ============================================================
+   COPY / CONVERSION UPDATE (advisor brief) — 2026
+   ============================================================ */
+/* Equipped tagline */
+.equipped-tag{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.05em;color:var(--green-700);font-weight:600;margin-top:.8rem;font-size:.95rem}
+
+/* Local People / crew trust section */
+.local2{background:var(--cream)}
+.local2-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+.local2-media{aspect-ratio:4/3;border:3px solid var(--ink);border-radius:16px;box-shadow:6px 6px 0 var(--ink);min-height:240px}
+.local2-copy h2{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.local2-copy>p{color:var(--body);margin:1rem 0 1.5rem;font-size:1.08rem;max-width:46ch}
+.local2-copy .btn svg{width:18px;height:18px}
+@media(max-width:820px){ .local2-grid{grid-template-columns:1fr} .local2-media{max-width:520px} }
+
+/* Final section: 3-step text-photos path */
+.final-steps{display:grid;gap:.9rem;margin:1.1rem 0 1.3rem;text-align:left}
+.final-steps li{display:flex;gap:.8rem;align-items:flex-start}
+.final-steps .fs-n{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--font-display);font-size:1.05rem;display:grid;place-items:center;margin-top:2px}
+.final-steps strong{display:block;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.03em;color:#fff;font-size:1.02rem;line-height:1.15}
+.final-steps span{color:#C9BBA4;font-size:.92rem}
+.final-fast .btn svg{width:19px;height:19px}
+
+/* Sticky mobile action bar */
+.mobile-bar{display:none}
+@media(max-width:680px){
+  .mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:60;border-top:2.5px solid var(--ink)}
+  .mb-btn{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem .6rem;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.04em;font-weight:600;font-size:1.04rem}
+  .mb-btn svg{width:20px;height:20px}
+  .mb-call{background:var(--ink);color:#fff}
+  .mb-text{background:var(--green);color:#fff;border-left:2.5px solid var(--ink)}
+  body{padding-bottom:60px}
+}
+
+/* Long-text hero CTAs stack cleanly on small screens */
+@media(max-width:560px){ .hero2-cta{flex-direction:column;align-items:stretch} .hero2-cta .btn{width:100%;white-space:normal} }
