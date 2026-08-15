@@ -95,6 +95,36 @@
     setPos();
   }
 
+  // --- Conversion tracking (GA4 events) ---
+  function track(name, params){ try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {} }
+  function sectionOf(el){
+    var s = el.closest('section, header, footer, .mobile-bar');
+    if (!s) return 'page';
+    if (s.classList && s.classList.contains('mobile-bar')) return 'mobile_bar';
+    if (s.tagName === 'HEADER') return 'header';
+    if (s.tagName === 'FOOTER') return 'footer';
+    if (s.classList && s.classList.contains('hero2')) return 'hero';
+    if (s.classList && s.classList.contains('final')) return 'final';
+    return s.id || 'page';
+  }
+  document.querySelectorAll('a[href^="sms:"]').forEach(function (a) {
+    a.addEventListener('click', function () { track('text_photos_click', { location: sectionOf(a) }); });
+  });
+  document.querySelectorAll('a[href^="tel:"]').forEach(function (a) {
+    a.addEventListener('click', function () { track('call_click', { location: sectionOf(a) }); });
+  });
+  document.querySelectorAll('.clean-card .btn').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var href = a.getAttribute('href') || '';
+      var svc = href.indexOf('garage') > -1 ? 'garage' : href.indexOf('estate') > -1 ? 'estate' : href.indexOf('office') > -1 ? 'rental' : 'other';
+      track('service_card_click', { service: svc });
+    });
+  });
+  var trackForm = document.getElementById('quoteForm');
+  if (trackForm) {
+    trackForm.addEventListener('submit', function () { if (trackForm.checkValidity()) track('quote_form_submit'); });
+  }
+
   // Current year in footer
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();
