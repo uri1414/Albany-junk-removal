@@ -758,3 +758,8 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 
 /* Long-text hero CTAs stack cleanly on small screens */
 @media(max-width:560px){ .hero2-cta{flex-direction:column;align-items:stretch} .hero2-cta .btn{width:100%;white-space:normal} }
+
+/* Local People section without a photo yet — clean centered text */
+.local2-solo{max-width:720px;margin-inline:auto;text-align:center}
+.local2-solo .eyebrow{justify-content:center}
+.local2-solo .local2-copy>p{margin:1rem auto 1.5rem}
