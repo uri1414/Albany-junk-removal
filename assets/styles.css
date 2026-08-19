@@ -27,9 +27,9 @@
   --font-script:"Kaushan Script","Segoe Script",cursive;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
 body{
-  margin:0;font-family:var(--font-body);color:var(--body);background:var(--cream);
+  margin:0;overflow-x:hidden;font-family:var(--font-body);color:var(--body);background:var(--cream);
   font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
 }
 h1,h2,h3,h4{font-family:var(--font-display);color:var(--ink);font-weight:800;line-height:1.07;letter-spacing:-.025em;margin:0}
@@ -544,7 +544,10 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
    ============================================================ */
 .callbtn{gap:.5rem}
 .callbtn svg{width:17px;height:17px}
-@media(max-width:680px){ .nav-cta .callbtn{display:inline-flex} }
+/* On mobile the header collapses to just the burger; the sticky bottom bar
+   handles Call / Text Photos, so the wide phone button is hidden to avoid
+   pushing the header past the viewport (horizontal-overflow / cream gutter). */
+@media(max-width:680px){ .nav-cta .callbtn{display:none} }
 
 /* 01 · Hero (dark, split) */
 .hero2{background:var(--ink);color:var(--cream);overflow:hidden;position:relative;border-bottom:3px solid var(--ink)}
