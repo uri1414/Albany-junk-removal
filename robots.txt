@@ -4,7 +4,8 @@
 User-agent: *
 Allow: /
 
-# Major AI search crawlers (welcome — helps AI Overviews / ChatGPT / Perplexity cite you)
+# Major AI search crawlers — explicitly allowed to crawl the site.
+# (This grants access only; it is not a ranking or citation guarantee.)
 User-agent: GPTBot
 Allow: /
 
