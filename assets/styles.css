@@ -71,7 +71,7 @@ header.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 24px -20px rgba
 .nav-cta{display:flex;align-items:center;gap:1rem}
 .callnum{display:inline-flex;align-items:center;gap:.5rem;color:var(--forest);font-weight:700;font-size:1rem;font-family:var(--font-display);letter-spacing:-.01em}
 .callnum svg{width:17px;height:17px;color:var(--green)}
-.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:10px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
 .burger span{width:24px;height:2.5px;background:var(--forest);border-radius:2px;transition:.3s var(--ease)}
 
 /* Mobile menu */
@@ -373,7 +373,7 @@ footer{background:var(--forest-deep);color:#C9B79A;padding:clamp(3rem,5vw,4.2rem
 .m-acc-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
 .m-acc-panel{display:none;flex-direction:column;padding:.2rem 0 .2rem .9rem}
 .m-acc-panel.open{display:flex}
-.m-acc-panel a{font-family:var(--font-body);font-size:1.12rem;font-weight:600;color:var(--green-700);padding:.55rem 0;border-bottom:1px solid var(--line)}
+.m-acc-panel a{font-family:var(--font-body);font-size:1.12rem;font-weight:600;color:var(--green-700);padding:.62rem 0;min-height:44px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
 .m-acc-panel a:last-child{border-bottom:0}
 
 /* Wide (two-column) services dropdown for the full menu */
@@ -397,7 +397,7 @@ h1,h2{text-transform:uppercase;letter-spacing:.5px;line-height:1.03}
 details.faq summary{font-family:var(--font-cond);font-weight:600;text-transform:none;letter-spacing:.01em;font-size:1.12rem}
 
 /* Eyebrow -> Barlow Condensed label */
-.eyebrow{font-family:var(--font-cond);font-weight:600;font-size:.95rem;letter-spacing:.12em;color:var(--green)}
+.eyebrow{font-family:var(--font-cond);font-weight:600;font-size:.95rem;letter-spacing:.12em;color:var(--green-700)}
 .eyebrow::before{background:var(--green);height:3px}
 
 /* Kaushan script accent (secondary tagline) */
@@ -501,7 +501,7 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 
 /* ---- Hero art caption + trust badges under the truck ---- */
 .hero-art-cap{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.06em;
-  font-weight:600;color:var(--green);text-align:center;font-size:1.02rem;margin:0}
+  font-weight:600;color:var(--green-700);text-align:center;font-size:1.02rem;margin:0}
 .hero-badges{display:flex;gap:.8rem;margin-top:1rem}
 .hero-badges .float-card{position:static;max-width:none;flex:1;box-shadow:3px 3px 0 var(--ink)}
 @media(max-width:520px){ .hero-badges{flex-direction:column} }
@@ -604,7 +604,7 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 .clean-icon svg{width:24px;height:24px}
 .clean-body{padding:2.2rem 1.5rem 1.6rem;text-align:center;display:flex;flex-direction:column;flex:1}
 .clean-body h3{font-size:1.28rem}
-.clean-tag{font-family:var(--font-script);color:var(--green);font-size:1.15rem;margin:.15rem 0 .7rem}
+.clean-tag{font-family:var(--font-script);color:var(--green-700);font-size:1.15rem;margin:.15rem 0 .7rem}
 .clean-body>p{color:var(--body);font-size:.96rem}
 .clean-body .btn{margin-top:auto;width:100%;font-size:.92rem}
 .clean-body .btn svg{width:16px;height:16px}

@@ -3,3 +3,20 @@
 [build]
   publish = "."
   command = ""
+
+# Long-cache fingerprint-free static assets. Images/CSS/JS are versioned by
+# filename (or ?v= query), so a year-long immutable cache is safe; when an
+# asset changes, its URL changes.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Baseline security headers for every response.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
