@@ -543,7 +543,26 @@
             <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your name" required /></div>
             <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" placeholder="(503) 555-0000" required /></div>
           </div>
-          <div class="field"><label for="details">What do you need removed?</label><input id="details" name="details" type="text" placeholder="e.g. garage cleanout, old couch, hot tub…" /></div>
+          <div class="field">
+            <label for="service">What do you need removed?</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option>Furniture removal</option>
+              <option>Mattress removal</option>
+              <option>Appliance / refrigerator removal</option>
+              <option>Washer &amp; dryer removal</option>
+              <option>Hot tub removal</option>
+              <option>Garage cleanout</option>
+              <option>Storage unit cleanout</option>
+              <option>Estate cleanout</option>
+              <option>Office cleanout</option>
+              <option>Construction debris</option>
+              <option>Yard waste removal</option>
+              <option>Scrap metal removal</option>
+              <option>General household junk</option>
+              <option>Not sure / multiple items</option>
+            </select>
+          </div>
           <button class="btn btn-amber btn-lg" type="submit">Send My Request <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           <p class="form-note">Free quote · No obligation · We do all the lifting</p>
         </form>
