@@ -777,3 +777,15 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 .price-card h3{font-size:1.22rem;margin:.25rem 0 .55rem}
 .price-card p{font-size:.96rem;color:var(--body)}
 @media(max-width:760px){.price-grid{grid-template-columns:1fr}}
+
+/* Homepage "Follow us" social band */
+.social{background:var(--cream-deep);border-top:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink)}
+.social-inner{display:flex;align-items:center;justify-content:space-between;gap:1.8rem 2.4rem;flex-wrap:wrap}
+.social-copy{max-width:34rem}
+.social-copy h2{font-size:clamp(1.55rem,3vw,2.2rem);margin:.35rem 0 .5rem}
+.social-copy p{color:var(--body);font-size:1.02rem}
+.social-links{display:flex;gap:.9rem;flex-wrap:wrap}
+.social-btn{display:inline-flex;align-items:center;gap:.7rem;font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.03em;font-weight:600;font-size:1.05rem;padding:.85rem 1.4rem;border:2.5px solid var(--ink);border-radius:12px;box-shadow:4px 4px 0 var(--ink);background:var(--paper);color:var(--ink);transition:transform .12s var(--ease),box-shadow .12s var(--ease)}
+.social-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.social-btn svg{width:24px;height:24px;flex-shrink:0}
+@media(max-width:640px){.social-inner{flex-direction:column;align-items:flex-start}.social-btn{width:100%;justify-content:center}}
