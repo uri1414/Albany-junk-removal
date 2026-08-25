@@ -769,3 +769,11 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 
 /* Service-card CTA labels can wrap ("Explore Rental & Apartment Cleanouts") */
 .clean-body .btn{white-space:normal;line-height:1.2}
+
+/* Services hub — pricing cards */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.price-card{background:var(--cream);border:2.5px solid var(--ink);border-radius:16px;box-shadow:5px 5px 0 var(--ink);padding:1.5rem 1.4rem}
+.price-card .pc-size{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.05em;font-weight:700;color:var(--green-700);font-size:1.1rem}
+.price-card h3{font-size:1.22rem;margin:.25rem 0 .55rem}
+.price-card p{font-size:.96rem;color:var(--body)}
+@media(max-width:760px){.price-grid{grid-template-columns:1fr}}
