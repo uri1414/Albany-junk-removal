@@ -4,6 +4,15 @@
   publish = "."
   command = ""
 
+# Canonical host: force www -> apex (non-www), matching every page's
+# <link rel="canonical"> and og:url. Consolidates link/ranking signals onto one
+# hostname. (http -> https is handled by Netlify's "Force HTTPS" domain setting.)
+[[redirects]]
+  from = "https://www.albanyjunkremoval.org/*"
+  to = "https://albanyjunkremoval.org/:splat"
+  status = 301
+  force = true
+
 # Long-cache fingerprint-free static assets. Images/CSS/JS are versioned by
 # filename (or ?v= query), so a year-long immutable cache is safe; when an
 # asset changes, its URL changes.
