@@ -789,3 +789,7 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 .social-btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
 .social-btn svg{width:24px;height:24px;flex-shrink:0}
 @media(max-width:640px){.social-inner{flex-direction:column;align-items:flex-start}.social-btn{width:100%;justify-content:center}}
+
+/* Hero: keyword-led H1 + brand tagline kept as a bold subhead */
+.hero2-tagline{font-family:var(--font-display);font-size:clamp(1.35rem,2.7vw,2rem);color:#F7EFE0;letter-spacing:.5px;line-height:1.05;margin-top:.7rem}
+.hero2-tagline em{font-style:normal;color:var(--green)}
