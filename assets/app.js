@@ -81,20 +81,21 @@
     });
   }
 
-  // Quote form city: picking "Other" reveals (and requires) a free-text city box
-  var citySel = document.getElementById('city');
-  var cityOtherField = document.getElementById('cityOtherField');
-  var cityOther = document.getElementById('cityOther');
-  if (citySel && cityOtherField && cityOther) {
-    var syncCity = function () {
-      var other = citySel.value === 'Other';
-      cityOtherField.hidden = !other;
-      cityOther.required = other;
-      if (!other) cityOther.value = '';
+  // Quote form dropdowns: picking "Other" reveals (and requires) a free-text box
+  [['city', 'cityOtherField', 'cityOther'], ['service', 'serviceOtherField', 'serviceOther']].forEach(function (ids) {
+    var sel = document.getElementById(ids[0]);
+    var field = document.getElementById(ids[1]);
+    var input = document.getElementById(ids[2]);
+    if (!sel || !field || !input) return;
+    var sync = function () {
+      var other = sel.value === 'Other';
+      field.hidden = !other;
+      input.required = other;
+      if (!other) input.value = '';
     };
-    citySel.addEventListener('change', syncCity);
-    syncCity();
-  }
+    sel.addEventListener('change', sync);
+    sync();
+  });
 
   // Cleanout cards: tap to reveal the "after" on touch (hover handles desktop)
   document.querySelectorAll('.clean-photo.ba-hover').forEach(function (el) {
