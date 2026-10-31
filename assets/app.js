@@ -81,6 +81,21 @@
     });
   }
 
+  // Quote form city: picking "Other" reveals (and requires) a free-text city box
+  var citySel = document.getElementById('city');
+  var cityOtherField = document.getElementById('cityOtherField');
+  var cityOther = document.getElementById('cityOther');
+  if (citySel && cityOtherField && cityOther) {
+    var syncCity = function () {
+      var other = citySel.value === 'Other';
+      cityOtherField.hidden = !other;
+      cityOther.required = other;
+      if (!other) cityOther.value = '';
+    };
+    citySel.addEventListener('change', syncCity);
+    syncCity();
+  }
+
   // Cleanout cards: tap to reveal the "after" on touch (hover handles desktop)
   document.querySelectorAll('.clean-photo.ba-hover').forEach(function (el) {
     el.addEventListener('click', function () { el.classList.toggle('revealed'); });
