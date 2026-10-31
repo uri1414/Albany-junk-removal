@@ -436,6 +436,27 @@
                   <option>Not sure / multiple items</option>
                 </select>
               </div>
+              <div class="field">
+                <label for="city">What city is the job in?</label>
+                <select id="city" name="city" required>
+                  <option value="" selected disabled>Select your city…</option>
+                  <option>Albany</option>
+                  <option>Corvallis</option>
+                  <option>Lebanon</option>
+                  <option>Jefferson</option>
+                  <option>Sweet Home</option>
+                  <option>Philomath</option>
+                  <option>Tangent</option>
+                  <option>Brownsville</option>
+                  <option>Millersburg</option>
+                  <option>Salem area</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="field" id="cityOtherField" hidden>
+                <label for="cityOther">Which city?</label>
+                <input id="cityOther" name="city_other" type="text" placeholder="Your city or town" />
+              </div>
               <div class="field"><label for="details">Tell us about the hot tub <span style="font-weight:400;color:var(--muted)">(optional)</span></label><textarea id="details" name="details" placeholder="Spa size, where it sits (deck, patio, backyard), how it's wired, your ZIP, and when you'd like it gone…"></textarea></div>
               <button class="btn btn-amber btn-lg" type="submit">Get My Free Quote</button>
               <p class="form-note">By submitting you agree to be contacted about your quote.</p>
