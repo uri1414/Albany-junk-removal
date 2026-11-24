@@ -4,6 +4,10 @@
   publish = "."
   command = ""
 
+# Serverless functions (live Google rating for the homepage badge).
+[functions]
+  directory = "netlify/functions"
+
 # Canonical host: force www -> apex (non-www), matching every page's
 # <link rel="canonical"> and og:url. Consolidates link/ranking signals onto one
 # hostname. (http -> https is handled by Netlify's "Force HTTPS" domain setting.)
