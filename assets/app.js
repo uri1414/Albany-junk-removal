@@ -45,8 +45,8 @@
 
   // Quote form (present on the homepage, service pages, and services hub).
   // Submits to Netlify Forms via AJAX so the inline success state shows without
-  // a page navigation. Add an email notification under Forms in Netlify to get
-  // each lead in your inbox. Falls back to the success message on local preview.
+  // a page navigation. Netlify Forms emails each lead to info@albanyjunkremoval.org.
+  // Falls back to the success message on local preview.
   var form = document.getElementById('quoteForm');
   if (form) {
     var submitBtn = form.querySelector('button[type="submit"]');
