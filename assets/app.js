@@ -97,6 +97,28 @@
     sync();
   });
 
+  // Google rating badge: refresh the built-in numbers from the live endpoint
+  // (netlify/functions/google-rating.mjs). Any failure leaves the badge as-is.
+  var badge = document.querySelector('[data-google-rating]');
+  if (badge && window.fetch) {
+    var loadRating = function () {
+      fetch('/api/google-rating').then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+        if (!d || typeof d.rating !== 'number' || !d.count) return;
+        var r = Math.round(d.rating * 10) / 10;
+        var val = badge.querySelector('[data-rating-value]');
+        var cnt = badge.querySelector('[data-rating-count]');
+        var noun = badge.querySelector('[data-rating-noun]');
+        var stars = badge.querySelector('.hr-stars');
+        if (val) val.textContent = r.toFixed(1);
+        if (cnt) cnt.textContent = d.count;
+        if (noun) noun.textContent = d.count === 1 ? 'review' : 'reviews';
+        if (stars) stars.style.setProperty('--pct', Math.max(0, Math.min(100, r / 5 * 100)) + '%');
+        badge.setAttribute('aria-label', 'Rated ' + r.toFixed(1) + ' out of 5 on Google from ' + d.count + (d.count === 1 ? ' review' : ' reviews'));
+      }).catch(function () {});
+    };
+    if ('requestIdleCallback' in window) requestIdleCallback(loadRating, { timeout: 3000 }); else setTimeout(loadRating, 1500);
+  }
+
   // Cleanout cards: tap to reveal the "after" on touch (hover handles desktop)
   document.querySelectorAll('.clean-photo.ba-hover').forEach(function (el) {
     el.addEventListener('click', function () { el.classList.toggle('revealed'); });
