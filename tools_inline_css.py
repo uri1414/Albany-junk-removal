@@ -9,7 +9,7 @@ block = '<style id="site-css">' + css + '</style>'
 link_re  = re.compile(r'<link rel="stylesheet" href="/assets/styles\.css"[^>]*/?>')
 style_re = re.compile(r'<style id="site-css">.*?</style>', re.S)
 n=0
-for f in ['index.html'] + glob.glob('*/index.html'):
+for f in ['index.html', '404.html'] + glob.glob('*/index.html'):
     s = open(f).read()
     if style_re.search(s):
         s2 = style_re.sub(lambda m: block, s)
