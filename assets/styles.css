@@ -810,3 +810,10 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 .svc-action{margin:1.4rem 0 0;max-width:520px}
 .svc-action img{width:100%;height:auto;display:block;border:3px solid var(--ink);border-radius:16px;box-shadow:6px 6px 0 var(--ink)}
 .svc-action figcaption{margin-top:.75rem;font-size:.9rem;color:var(--muted)}
+
+/* Services page: minimum job price callout */
+.price-min{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 2.2rem;margin-top:1.8rem;padding:1.2rem 1.5rem;background:var(--ink);color:#fff;border-radius:16px}
+.price-min div{display:flex;flex-direction:column}
+.price-min .pm-label{font-family:var(--font-cond);text-transform:uppercase;letter-spacing:.06em;font-size:.9rem;color:#F5B301}
+.price-min strong{font-family:var(--font-cond);font-size:2.2rem;line-height:1}
+.price-min p{flex:1 1 260px;margin:0;font-size:.95rem;color:#E9E2D4}
