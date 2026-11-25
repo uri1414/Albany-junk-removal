@@ -805,3 +805,8 @@ header.scrolled{box-shadow:0 5px 0 -2px rgba(14,12,11,.14)}
 
 /* Service-page hero photo that is already a side-by-side before/after: keep its full width */
 .svc-photo.svc-photo-wide{aspect-ratio:auto}
+
+/* Service-page action photo (replaces the inline "action photo" slot) */
+.svc-action{margin:1.4rem 0 0;max-width:520px}
+.svc-action img{width:100%;height:auto;display:block;border:3px solid var(--ink);border-radius:16px;box-shadow:6px 6px 0 var(--ink)}
+.svc-action figcaption{margin-top:.75rem;font-size:.9rem;color:var(--muted)}
